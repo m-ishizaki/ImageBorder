@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<AssemblyName>Rksoftware.$(MSBuildProjectName)</AssemblyName>
+
+	<PackAsTool>true</PackAsTool>
+	<ToolCommandName>ImageBorder</ToolCommandName>
+	<PackageOutputPath>./nupkg</PackageOutputPath>
+	<PackageId>$(AssemblyName)</PackageId>
+	<Authors>Rksoftware</Authors>
+	<RootNamespace>Rksoftware.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+	<AssemblyVersion></AssemblyVersion>
+	<Version>$(VersionPrefix)0.1.1</Version>
+	<DebugType>none</DebugType>
+
+	<Title>Image Border</Title>
+	<Description>Image Border</Description>
+	<Summary>Image Border</Summary>
+	<PackageProjectUrl>https://github.com/m-ishizaki/ImageBorder</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/m-ishizaki/ImageBorder</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<Copyright>m-ishizaki</Copyright>
+	<PackageReleaseNotes></PackageReleaseNotes>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<PackageLicenseFile>LICENSE</PackageLicenseFile>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+	<None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Update="README.md">
+	  <Pack>True</Pack>
+	  <PackagePath>\</PackagePath>
+	</None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="9.0.2" />
+  </ItemGroup>
+
+</Project>
